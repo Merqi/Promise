@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>09_自定义Promise</title>
+</head>
+<body>
+	<script type="text/javascript" src="./js/Promise.js"></script>
+<script type="text/javascript" >
+
+let p1 = Promise.resolve(new Promise((resolve,reject)=>{resolve(200)})) //用于快速创建一个状态为resolved的Promise实例，同时指定value
+//let p2 = Promise.reject(2) //用于快速创建一个状态为rejected的Promise实例，同时指定reason
+p1.then(
+	value => console.log('成功的回调',value),
+	reason => console.log('失败的回调',reason),
+)
+
+</script>
+</body>
+</html>
